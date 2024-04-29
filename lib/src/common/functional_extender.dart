@@ -23,9 +23,7 @@ extension FunctionalExtender<T> on T? {
   }
 
   T? takeIf(bool Function(T) f) {
-    final T? self = this;
-
-    return self != null && f(self) ? self : null;
+    return this != null && f(this as T) ? this : null;
   }
 }
 
